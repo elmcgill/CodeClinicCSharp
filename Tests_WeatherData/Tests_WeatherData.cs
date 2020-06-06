@@ -99,13 +99,26 @@ namespace Tests_WeatherData
             {
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
-                // Extract
-                // Transform
-                // Load
+                var data = from wo in WeatherData.ReadRange(text, start, end) //extract
+                           select new //transform
+                           {
+                               Hours = (wo.TimeStamp - start).TotalHours,
+                               wo.Barometric_Pressure
+                           };
+                var arrX = new List<double>();
+                var arrY = new List<double>();
 
-                // MathNet.Numerics.Fit.Line(...);
+                foreach(var wo in data) //load
+                {
+                    arrX.Add(wo.Hours);
+                    arrY.Add(wo.Barometric_Pressure);
+                }
 
-                throw new NotImplementedException();
+                Tuple<double, double> intslope;
+
+                intslope = MathNet.Numerics.Fit.Line(arrX.ToArray(), arrY.ToArray());
+
+                Check.That(intslope.Item2).IsLessThan(0);
             }
         }
     }
