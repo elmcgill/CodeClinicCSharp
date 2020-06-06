@@ -1,0 +1,6 @@
+D:\Documents\Projects\CodeClinicCSharp\WeatherData\bin\Debug\WeatherData.dll
+D:\Documents\Projects\CodeClinicCSharp\WeatherData\bin\Debug\WeatherData.pdb
+D:\Documents\Projects\CodeClinicCSharp\WeatherData\obj\Debug\WeatherData.csprojAssemblyReference.cache
+D:\Documents\Projects\CodeClinicCSharp\WeatherData\obj\Debug\WeatherData.csproj.CoreCompileInputs.cache
+D:\Documents\Projects\CodeClinicCSharp\WeatherData\obj\Debug\WeatherData.dll
+D:\Documents\Projects\CodeClinicCSharp\WeatherData\obj\Debug\WeatherData.pdb
