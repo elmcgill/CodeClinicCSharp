@@ -84,10 +84,8 @@ namespace Tests_WeatherData
                 text.ReadLine(); // ignore 1st line of text, it contains headers.
 
                 // TODO: Implement WeatherData.ReadRange
-
-                //Check.That(data.Count()).IsEqualTo(6);
-
-                throw new NotImplementedException();
+                var data = WeatherData.ReadRange(text, start, end);
+                Check.That(data.Count()).IsEqualTo(6);
             }
         }
 
