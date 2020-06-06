@@ -4,3 +4,4 @@ D:\Documents\Projects\CodeClinicCSharp\WhereAmI\bin\Debug\WhereAmI.pdb
 D:\Documents\Projects\CodeClinicCSharp\WhereAmI\obj\Debug\WhereAmI.csproj.CoreCompileInputs.cache
 D:\Documents\Projects\CodeClinicCSharp\WhereAmI\obj\Debug\WhereAmI.exe
 D:\Documents\Projects\CodeClinicCSharp\WhereAmI\obj\Debug\WhereAmI.pdb
+D:\Documents\Projects\CodeClinicCSharp\WhereAmI\obj\Debug\WhereAmI.csprojAssemblyReference.cache
