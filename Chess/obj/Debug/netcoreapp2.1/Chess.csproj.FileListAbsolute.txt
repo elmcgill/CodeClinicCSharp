@@ -1,0 +1,9 @@
+D:\Documents\Projects\CodeClinicCSharp\Chess\bin\Debug\netcoreapp2.1\Chess.deps.json
+D:\Documents\Projects\CodeClinicCSharp\Chess\bin\Debug\netcoreapp2.1\Chess.dll
+D:\Documents\Projects\CodeClinicCSharp\Chess\bin\Debug\netcoreapp2.1\Chess.pdb
+D:\Documents\Projects\CodeClinicCSharp\Chess\obj\Debug\netcoreapp2.1\Chess.csprojAssemblyReference.cache
+D:\Documents\Projects\CodeClinicCSharp\Chess\obj\Debug\netcoreapp2.1\Chess.AssemblyInfoInputs.cache
+D:\Documents\Projects\CodeClinicCSharp\Chess\obj\Debug\netcoreapp2.1\Chess.AssemblyInfo.cs
+D:\Documents\Projects\CodeClinicCSharp\Chess\obj\Debug\netcoreapp2.1\Chess.csproj.CoreCompileInputs.cache
+D:\Documents\Projects\CodeClinicCSharp\Chess\obj\Debug\netcoreapp2.1\Chess.dll
+D:\Documents\Projects\CodeClinicCSharp\Chess\obj\Debug\netcoreapp2.1\Chess.pdb
