@@ -1,4 +1,4 @@
-﻿namespace MusicalInstrument
+﻿namespace AccessingPeripherals
 {
     partial class Form1
     {
@@ -38,35 +38,32 @@
             // 
             this.trackVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackVolume.Location = new System.Drawing.Point(24, 756);
-            this.trackVolume.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.trackVolume.Location = new System.Drawing.Point(12, 393);
             this.trackVolume.Maximum = 100;
             this.trackVolume.Name = "trackVolume";
-            this.trackVolume.Size = new System.Drawing.Size(1552, 90);
+            this.trackVolume.Size = new System.Drawing.Size(776, 45);
             this.trackVolume.TabIndex = 0;
             // 
             // trackFrequency
             // 
             this.trackFrequency.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackFrequency.Location = new System.Drawing.Point(1486, 23);
-            this.trackFrequency.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.trackFrequency.Location = new System.Drawing.Point(743, 12);
             this.trackFrequency.Maximum = 1000;
             this.trackFrequency.Minimum = 100;
             this.trackFrequency.Name = "trackFrequency";
             this.trackFrequency.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackFrequency.Size = new System.Drawing.Size(90, 721);
+            this.trackFrequency.Size = new System.Drawing.Size(45, 375);
             this.trackFrequency.TabIndex = 1;
             this.trackFrequency.Value = 100;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.trackFrequency);
             this.Controls.Add(this.trackVolume);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Musical Instrument";
             ((System.ComponentModel.ISupportInitialize)(this.trackVolume)).EndInit();

@@ -1,6 +1,4 @@
-﻿using NAudio.Wave;
-using NAudio.Wave.SampleProviders;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MusicalInstrument
+namespace AccessingPeripherals
 {
     public partial class Form1 : Form
     {
