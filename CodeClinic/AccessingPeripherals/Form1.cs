@@ -34,18 +34,37 @@ namespace AccessingPeripherals
             trackVolume.ValueChanged += (s, e) => player.Volume = trackVolume.Value / 100F;
             trackVolume.Value = 50;
 
-
-
         }
 
+        private System.Drawing.Point CursorPositionOnMouseDown;
+        private bool ButtonIsDown = false;
         private void TheMouseDown(object sender, MouseEventArgs e)
         {
             player.Play();
+
+            CursorPositionOnMouseDown = e.Location;
+            ButtonIsDown = true;
         }
 
         private void TheMouseUp(object sender, MouseEventArgs e)
         {
             player.Stop();
+            ButtonIsDown = false;
+        }
+
+        private void panel_MouseMove(object sender, MouseEventArgs e)
+        {
+            var dX = e.X - CursorPositionOnMouseDown.X;
+            var volume = "";
+            var dY = CursorPositionOnMouseDown.Y - e.Y;
+            var freq = "";
+
+            if (ButtonIsDown)
+            {
+
+            }
+
+            Text = $"Musical Instrument! ({dX})({dY})(vol, freq)";
         }
     }
 }
