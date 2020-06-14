@@ -55,16 +55,20 @@ namespace AccessingPeripherals
         private void panel_MouseMove(object sender, MouseEventArgs e)
         {
             var dX = e.X - CursorPositionOnMouseDown.X;
-            var volume = "";
+            var volume = player.Volume + (dX /50000F);
             var dY = CursorPositionOnMouseDown.Y - e.Y;
-            var freq = "";
+            var freq = sine.Frequency + (dY / 100F);
 
             if (ButtonIsDown)
             {
+                player.Volume = (volume > 0) ? (volume < 1) ? volume : 1 : 0;
+                sine.Frequency = (freq > 100) ? (freq < 1000) ? freq : 1000 : 100;
 
+                trackFrequency.Value = (int)Math.Round(sine.Frequency);
+                trackVolume.Value = (int)Math.Round(player.Volume * 100);
             }
 
-            Text = $"Musical Instrument! ({dX})({dY})(vol, freq)";
+            Text = $"Musical Instrument! ({dX})({dY})({volume}, {freq})";
         }
     }
 }
