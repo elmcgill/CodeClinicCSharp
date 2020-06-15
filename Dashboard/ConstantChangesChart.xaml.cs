@@ -54,13 +54,15 @@ namespace Dashboard
             //Todo Populate the collection ChartValues
             string filename = @"D:\Documents\Projects\CodeClinicCSharp\dashBoardData.csv";
 
-            foreach(var ft in FactoryTelemetry.Load(filename))
+            foreach (var ft in FactoryTelemetry.Load(filename))
             {
                 ChartValues.Add(ft);
 
                 this.EngineEfficiency = ft.Efficiency;
 
-                if(ChartValues.Count > 30)
+
+
+                if (ChartValues.Count > 30)
                 {
                     ChartValues.RemoveAt(0);
                 }
@@ -69,8 +71,24 @@ namespace Dashboard
             }
         }
 
+        public double AxisStep { get; set; } = TimeSpan.FromSeconds(5).Ticks;
+        public double AxisUnit { get; set; } = TimeSpan.FromSeconds(1).Ticks;
+
+        private double axisMax = tickZero + TimeSpan.FromSeconds(30).Ticks;
+        private double axisMin = tickZero;
+        public double AxisMax { get => axisMax; set { axisMax = value; OnPropertyChanged(nameof(AxisMax)); } }
+
+        public double AxisMin { get => axisMin; set { axisMin = value; OnPropertyChanged(nameof(AxisMin)); } }
+
+        private void AdjustAxis(long ticks)
+        {
+
+        }
+
         private double _EngineEffiency = 65;
-        public double EngineEfficiency {
+
+        public double EngineEfficiency
+        {
 
             get
             {
