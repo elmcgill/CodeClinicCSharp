@@ -3,6 +3,7 @@ using LiveCharts;
 using LiveCharts.Configurations;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -22,7 +23,7 @@ namespace Dashboard
     /// <summary>
     /// Interaction logic for ConstantChangesChart.xaml
     /// </summary>
-    public partial class ConstantChangesChart : UserControl
+    public partial class ConstantChangesChart : UserControl, INotifyPropertyChanged
     {
         public ConstantChangesChart()
         {
@@ -47,19 +48,40 @@ namespace Dashboard
         private void ReadData()
         {
             //Todo Populate the collection ChartValues
-            string filename = @"dashBoardData";
+            string filename = @"D:\Documents\Projects\CodeClinicCSharp\dashBoardData.csv";
 
             foreach(var ft in FactoryTelemetry.Load(filename))
             {
                 ChartValues.Add(ft);
 
+                this.EngineEfficiency = ft.Efficiency;
+
                 if(ChartValues.Count > 30)
                 {
-                    ChartValues.Remove(0);
+                    ChartValues.RemoveAt(0);
                 }
 
                 Thread.Sleep(30);
             }
         }
+
+        private double _EngineEffiency = 65;
+        public double EngineEfficiency {
+
+            get
+            {
+                return _EngineEffiency;
+            }
+            set
+            {
+                _EngineEffiency = value;
+                OnPropertyChanged(nameof(EngineEfficiency));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string name = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
     }
 }
