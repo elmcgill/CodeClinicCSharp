@@ -30,5 +30,21 @@
                 <lvc:AngularSection FromValue="85" ToValue="90" Fill="Orange"/>
             </lvc:AngularGauge.Sections>
         </lvc:AngularGauge>
+
+        <lvc:CartesianChart Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" DisableAnimations="False" Hoverable="False" DataTooltip="{x:Null}" Name="theCC">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Values="{Binding ChartValues}" Name="lsEffiency" PointGeometry="{x:Null}" LineSmoothness="0" StrokeThickness="2" Stroke="Black" Fill="Transparent"/>
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisX>
+                <lvc:Axis MaxValue="{Binding AxisMax}" MinValue="{Binding AxisMin}" Unit="{Binding AxisUnit}" LabelFormatter="{Binding XAxisLabelFormatter}">
+                    <lvc:Axis.Separator>
+                        <lvc:Separator Step="{Binding AxisStep}"/>
+                    </lvc:Axis.Separator>
+                </lvc:Axis>
+            </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis MinValue="0" MaxValue="270"/>
+            </lvc:CartesianChart.AxisY>
+        </lvc:CartesianChart>
     </Grid>
 </UserControl>
