@@ -60,7 +60,7 @@ namespace Dashboard
 
                 this.EngineEfficiency = ft.Efficiency;
 
-
+                AdjustAxis(ft.TimeStamp.Ticks);
 
                 if (ChartValues.Count > 30)
                 {
@@ -82,7 +82,9 @@ namespace Dashboard
 
         private void AdjustAxis(long ticks)
         {
-
+            var width = TimeSpan.FromSeconds(30).Ticks;
+            AxisMin = (ticks - tickZero < width) ? tickZero : ticks - width;
+            AxisMax = (ticks - tickZero < width) ? tickZero + width : ticks;
         }
 
         private double _EngineEffiency = 65;
